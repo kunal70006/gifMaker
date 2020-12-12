@@ -47,14 +47,17 @@ function App() {
 
   return ready ? (
     <div className="App">
+      <h1 className="Title">Gif Maker</h1>
       {vid && (
         <video src={URL.createObjectURL(vid)} controls width="250"></video>
       )}
 
       <input type="file" onChange={(e) => setVid(e.target.files?.item(0))} />
 
-      <h3 style={{ margin: '2rem' }}>Result</h3>
-      <button onClick={convertToGif}>Convert</button>
+      <h1 style={{ margin: '2rem' }}>Result</h1>
+      <button className="btn" onClick={convertToGif}>
+        Convert
+      </button>
 
       {gif && <img src={gif} width="250" />}
     </div>
